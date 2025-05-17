@@ -1,0 +1,14 @@
+# Calculamos el error
+                error = output - target
+                
+                # Calculamos los gradientes
+                d_error = error
+                d_sigmoid = output * (1 - output)
+                d_weight = x
+                d_bias = 1
+                
+                # Actualizamos los pesos 
+                self.weight -= learning_rate * d_error * d_sigmoid * d_weight
+                self.bias -= learning_rate * 
+
+d_error * d_sigmoid * d_bias
