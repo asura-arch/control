@@ -1,0 +1,8 @@
+ #  progreso 
+            if epoch % 100 == 0:
+                total_error = sum([(self.forward(X[i]) - y[i])**2 for i in range(len(X))])
+                print(f"Epoch {epoch}, Error: {total_error:.4f}")
+    
+    def predict(self, x, threshold=0.5):
+        # Hacemos una predicción binaria basada en el threshold
+        return self.forward(x) > threshold
